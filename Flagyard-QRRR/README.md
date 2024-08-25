@@ -1,6 +1,3 @@
-Sure! Here's the revised writeup using first-person language:
-
-
 ### **Flagyard QRRR! Forensics Challenge Writeup**
 
 
