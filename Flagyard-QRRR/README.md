@@ -1,3 +1,6 @@
+Sure! Here's the revised writeup using first-person language:
+
+
 ### **Flagyard QRRR! Forensics Challenge Writeup**
 
 
@@ -10,16 +13,16 @@
 
 ## **Challenge Description**
 
-In the **Flagyard QRRR! Forensics** challenge, we were provided with a GIF file containing over 50 QR codes. Our task was to extract and scan these QR codes to uncover a hidden flag.
+In the **Flagyard QRRR! Forensics** challenge, I was given a GIF file containing over 50 QR codes. My task was to extract and scan these QR codes to uncover a hidden flag.
 
 
 ## **Approach and Solution**
 
 ### **Step 1: Extract Frames from the GIF**
 
-Given that the QR codes were embedded within a GIF, the first step was to extract each frame of the GIF as a separate image.
+Since the QR codes were embedded within a GIF, my first step was to extract each frame of the GIF as a separate image.
 
-**Tools Used:**
+**Tools I Used:**
 - **Python** with the **Pillow** library.
 
 **Code:**
@@ -43,14 +46,14 @@ print(f"Extracted {frame_number + 1} frames from the GIF.")
 ```
 
 **Outcome:**
-- We successfully extracted all the frames, which were saved as individual PNG files.
+- I successfully extracted all the frames, which were saved as individual PNG files.
 
 ### **Step 2: Scan the Extracted QR Codes**
 
-Next, we needed to scan each of these extracted frames for QR codes to decode the hidden messages.
+Next, I needed to scan each of these extracted frames for QR codes to decode the hidden messages.
 
-**Tools Used:**
-- **Python** with the **OpenCV** library (as `pyzbar` had dependency issues).
+**Tools I Used:**
+- **Python** with the **OpenCV** library (since I encountered dependency issues with `pyzbar`).
 
 **Code:**
 ```python
@@ -80,15 +83,15 @@ print("QR code scanning complete.")
 ```
 
 **Outcome:**
-- We successfully scanned all frames and extracted the encoded data from the QR codes.
+- I successfully scanned all frames and extracted the encoded data from the QR codes.
 
 ### **Step 3: Decode the QR Code Messages**
 
-The QR code messages followed a pattern:
+The QR code messages all followed a pattern:
 ```
 SyntL{...}
 ```
-Recognizing this, we applied a **ROT13 cipher** to decode the messages.
+Recognizing this, I applied a **ROT13 cipher** to decode the messages.
 
 **Analysis:**
 - `SyntL` decoded to `FlagY`.
@@ -110,10 +113,10 @@ print(decoded_message)
 
 ### **Step 4: Identify the Flag**
 
-Upon decoding, one message stood out:
+After decoding, one message clearly stood out:
 - `FlagY{Congratulations_u_got_ittt}`
 
-This was clearly the intended flag for the challenge.
+This was the intended flag for the challenge.
 
 
 ## **Flag**
@@ -125,14 +128,14 @@ FlagY{Congratulations_u_got_ittt}
 
 ## **Lessons Learned**
 
-- **GIF File Handling:** Extracting frames from a GIF can be crucial in forensics challenges where each frame may contain different data.
+- **GIF File Handling:** I learned how to extract frames from a GIF, which can be crucial in forensics challenges where each frame may contain different data.
 - **QR Code Scanning:** It's important to have alternative tools like OpenCV ready when facing library dependencies.
-- **ROT13 Cipher:** Recognizing common encoding patterns, like ROT13, is key in quickly deciphering encoded data.
+- **ROT13 Cipher:** Recognizing common encoding patterns, like ROT13, helped me quickly decipher the encoded data.
 
 
 ## **Conclusion**
 
-The **Flagyard QRRR! Forensics** challenge was a great exercise in both forensic image analysis and cryptography. By systematically extracting, scanning, and decoding the data, we successfully uncovered the hidden flag and deepened our understanding of handling complex data hiding techniques in CTF challenges.
+The **Flagyard QRRR! Forensics** challenge was a great exercise in both forensic image analysis and cryptography. By systematically extracting, scanning, and decoding the data, I successfully uncovered the hidden flag and deepened my understanding of handling complex data hiding techniques in CTF challenges.
 
 
 Writeup by: Nodirjon
