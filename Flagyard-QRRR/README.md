@@ -135,4 +135,4 @@ FlagY{Congratulations_u_got_ittt}
 The **Flagyard QRRR! Forensics** challenge was a great exercise in both forensic image analysis and cryptography. By systematically extracting, scanning, and decoding the data, we successfully uncovered the hidden flag and deepened our understanding of handling complex data hiding techniques in CTF challenges.
 
 
-**Writeup by: Nodirjon
+Writeup by: Nodirjon
