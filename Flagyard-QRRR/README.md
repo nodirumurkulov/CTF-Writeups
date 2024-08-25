@@ -1,27 +1,28 @@
-Flagyard QRRR! Forensics Challenge Writeup
+### **Flagyard QRRR! Forensics Challenge Writeup**
 
 
-Challenge Name:** Flagyard QRRR! Forensics
+**Challenge Name:** Flagyard QRRR! Forensics
 
-Category: Forensics
+**Category:** Forensics
 
-Difficulty: Medium
+**Difficulty:** Medium
 
 
-Challenge Description
+## **Challenge Description**
 
-In the Flagyard QRRR! Forensics** challenge, we were provided with a GIF file containing over 50 QR codes. Our task was to extract and scan these QR codes to uncover a hidden 
+In the **Flagyard QRRR! Forensics** challenge, we were provided with a GIF file containing over 50 QR codes. Our task was to extract and scan these QR codes to uncover a hidden flag.
 
-Approach and Solution
 
-Step 1: Extract Frames from the GIF
+## **Approach and Solution**
+
+### **Step 1: Extract Frames from the GIF**
 
 Given that the QR codes were embedded within a GIF, the first step was to extract each frame of the GIF as a separate image.
 
-Tools Used:
-- Python with the **Pillow** library.
+**Tools Used:**
+- **Python** with the **Pillow** library.
 
-Code:
+**Code:**
 ```python
 from PIL import Image, ImageSequence
 import os
@@ -41,15 +42,15 @@ with Image.open(gif_path) as gif:
 print(f"Extracted {frame_number + 1} frames from the GIF.")
 ```
 
-Outcome:
+**Outcome:**
 - We successfully extracted all the frames, which were saved as individual PNG files.
 
-Step 2: Scan the Extracted QR Codes**
+### **Step 2: Scan the Extracted QR Codes**
 
 Next, we needed to scan each of these extracted frames for QR codes to decode the hidden messages.
 
-Tools Used:
-- Python with the **OpenCV** library (as `pyzbar` had dependency issues).
+**Tools Used:**
+- **Python** with the **OpenCV** library (as `pyzbar` had dependency issues).
 
 **Code:**
 ```python
@@ -114,7 +115,6 @@ Upon decoding, one message stood out:
 
 This was clearly the intended flag for the challenge.
 
----
 
 ## **Flag**
 
@@ -122,7 +122,6 @@ This was clearly the intended flag for the challenge.
 FlagY{Congratulations_u_got_ittt}
 ```
 
----
 
 ## **Lessons Learned**
 
@@ -130,16 +129,10 @@ FlagY{Congratulations_u_got_ittt}
 - **QR Code Scanning:** It's important to have alternative tools like OpenCV ready when facing library dependencies.
 - **ROT13 Cipher:** Recognizing common encoding patterns, like ROT13, is key in quickly deciphering encoded data.
 
----
 
 ## **Conclusion**
 
 The **Flagyard QRRR! Forensics** challenge was a great exercise in both forensic image analysis and cryptography. By systematically extracting, scanning, and decoding the data, we successfully uncovered the hidden flag and deepened our understanding of handling complex data hiding techniques in CTF challenges.
 
----
 
-**Writeup by: [Your Name]**
-
----
-
-Feel free to customize this writeup further or add any additional steps that you found particularly challenging or insightful. Congratulations on solving the challenge!
+**Writeup by: Nodirjon
