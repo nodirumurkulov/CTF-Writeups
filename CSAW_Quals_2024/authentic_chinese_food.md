@@ -1,4 +1,4 @@
-CSAW Quals 2024: ** Authentic Chinese Food Challenge Write-up**
+CSAW Quals 2024: **Authentic Chinese Food Challenge Write-up**
 
 
 #### Challenge Name: **Authentic Chinese Food**
